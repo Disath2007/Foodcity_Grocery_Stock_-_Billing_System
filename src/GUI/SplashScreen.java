@@ -27,7 +27,7 @@ public class SplashScreen extends javax.swing.JFrame {
     new Thread(() -> {
         for (int i = 0; i <= 100; i++) {
             try {
-                Thread.sleep(40);
+                Thread.sleep(10);
                 ProgressBar.setValue(i);
             } catch (Exception e) {
                 e.printStackTrace();

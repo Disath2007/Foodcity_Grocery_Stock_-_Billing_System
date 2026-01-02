@@ -55,11 +55,11 @@ public class UserManagement extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 600));
-        setSize(new java.awt.Dimension(700, 450));
+        setPreferredSize(new java.awt.Dimension(1530, 955));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1530, 955));
 
         MainPanel.setBackground(new java.awt.Color(243, 247, 244));
-        MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SidePanel.setBackground(new java.awt.Color(73, 149, 51));
 
@@ -123,10 +123,10 @@ public class UserManagement extends javax.swing.JFrame {
                         .addComponent(lblusername)
                         .addComponent(txtUsername2)
                         .addComponent(txtUsername)
-                        .addComponent(cmbRole, 0, 356, Short.MAX_VALUE)
+                        .addComponent(cmbRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(SidePanelLayout.createSequentialGroup()
                             .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                             .addComponent(btnupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(SidePanelLayout.createSequentialGroup()
                             .addComponent(btndelete, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -162,8 +162,6 @@ public class UserManagement extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
-        MainPanel.add(SidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 440, 900));
-
         Heder.setBackground(new java.awt.Color(73, 128, 37));
         Heder.setPreferredSize(new java.awt.Dimension(1000, 60));
 
@@ -187,8 +185,6 @@ public class UserManagement extends javax.swing.JFrame {
                 .addComponent(lblheader, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        MainPanel.add(Heder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1530, 60));
 
         Rightside.setBackground(new java.awt.Color(243, 247, 244));
 
@@ -261,7 +257,24 @@ public class UserManagement extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        MainPanel.add(Rightside, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 1090, 900));
+        javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
+        MainPanel.setLayout(MainPanelLayout);
+        MainPanelLayout.setHorizontalGroup(
+            MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Heder, javax.swing.GroupLayout.PREFERRED_SIZE, 1530, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(MainPanelLayout.createSequentialGroup()
+                .addComponent(SidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(Rightside, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        MainPanelLayout.setVerticalGroup(
+            MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelLayout.createSequentialGroup()
+                .addComponent(Heder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Rightside, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -274,7 +287,7 @@ public class UserManagement extends javax.swing.JFrame {
             .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1546, 964));
+        setSize(new java.awt.Dimension(1546, 979));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

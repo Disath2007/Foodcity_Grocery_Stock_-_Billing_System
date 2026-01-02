@@ -30,13 +30,33 @@ public class AdminDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menuBar1 = new java.awt.MenuBar();
+        menu1 = new java.awt.Menu();
+        menu2 = new java.awt.Menu();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnUserManagement = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        btnUserManagement2 = new javax.swing.JButton();
+        btnUserManagement3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        Welcome = new javax.swing.JLabel();
+        MonthlyProfit = new javax.swing.JPanel();
+        lblMonthlyProfit1 = new javax.swing.JLabel();
+        lblMonthlyProfit = new javax.swing.JLabel();
+        TotalSales = new javax.swing.JPanel();
+        lblTotalSales = new javax.swing.JLabel();
+        lblshowTotalSales = new javax.swing.JLabel();
+        TodaySales = new javax.swing.JPanel();
+        lblTodaySales = new javax.swing.JLabel();
+        lblMonthlyProfit5 = new javax.swing.JLabel();
+
+        menu1.setLabel("File");
+        menuBar1.add(menu1);
+
+        menu2.setLabel("Edit");
+        menuBar1.add(menu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Dashboard");
@@ -71,7 +91,7 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(147, 202, 55));
+        btnLogout.setBackground(new java.awt.Color(255, 102, 102));
         btnLogout.setFont(new java.awt.Font("Unispace", 1, 12)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(5, 63, 22));
         btnLogout.setText("Logout ");
@@ -82,6 +102,34 @@ public class AdminDashboard extends javax.swing.JFrame {
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
+            }
+        });
+
+        btnUserManagement2.setBackground(new java.awt.Color(147, 202, 55));
+        btnUserManagement2.setFont(new java.awt.Font("Unispace", 1, 12)); // NOI18N
+        btnUserManagement2.setForeground(new java.awt.Color(5, 63, 22));
+        btnUserManagement2.setText("Stock Management");
+        btnUserManagement2.setAlignmentX(0.5F);
+        btnUserManagement2.setBorder(null);
+        btnUserManagement2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnUserManagement2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUserManagement2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserManagement2ActionPerformed(evt);
+            }
+        });
+
+        btnUserManagement3.setBackground(new java.awt.Color(147, 202, 55));
+        btnUserManagement3.setFont(new java.awt.Font("Unispace", 1, 12)); // NOI18N
+        btnUserManagement3.setForeground(new java.awt.Color(5, 63, 22));
+        btnUserManagement3.setText("Customers");
+        btnUserManagement3.setAlignmentX(0.5F);
+        btnUserManagement3.setBorder(null);
+        btnUserManagement3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnUserManagement3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUserManagement3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserManagement3ActionPerformed(evt);
             }
         });
 
@@ -96,6 +144,8 @@ public class AdminDashboard extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnUserManagement3, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUserManagement2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUserManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -107,7 +157,11 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(57, 57, 57)
                 .addComponent(btnUserManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnUserManagement2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnUserManagement3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -115,8 +169,95 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(243, 247, 244));
         jPanel3.setForeground(new java.awt.Color(5, 63, 22));
 
-        jLabel2.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
-        jLabel2.setText("Welcome, Admin");
+        Welcome.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        Welcome.setText("Welcome , Admin");
+
+        MonthlyProfit.setBackground(new java.awt.Color(204, 255, 204));
+
+        lblMonthlyProfit1.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblMonthlyProfit1.setText("Monthly Profit - ");
+
+        lblMonthlyProfit.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblMonthlyProfit.setText("Loarding...");
+
+        javax.swing.GroupLayout MonthlyProfitLayout = new javax.swing.GroupLayout(MonthlyProfit);
+        MonthlyProfit.setLayout(MonthlyProfitLayout);
+        MonthlyProfitLayout.setHorizontalGroup(
+            MonthlyProfitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MonthlyProfitLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(lblMonthlyProfit1)
+                .addGap(49, 49, 49)
+                .addComponent(lblMonthlyProfit)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        MonthlyProfitLayout.setVerticalGroup(
+            MonthlyProfitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MonthlyProfitLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(MonthlyProfitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMonthlyProfit, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMonthlyProfit1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        TotalSales.setBackground(new java.awt.Color(204, 255, 204));
+
+        lblTotalSales.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblTotalSales.setText("Total Sales    -");
+
+        lblshowTotalSales.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblshowTotalSales.setText("Loarding...");
+
+        javax.swing.GroupLayout TotalSalesLayout = new javax.swing.GroupLayout(TotalSales);
+        TotalSales.setLayout(TotalSalesLayout);
+        TotalSalesLayout.setHorizontalGroup(
+            TotalSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TotalSalesLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(lblTotalSales, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(lblshowTotalSales)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        TotalSalesLayout.setVerticalGroup(
+            TotalSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TotalSalesLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(TotalSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTotalSales, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblshowTotalSales, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        TodaySales.setBackground(new java.awt.Color(204, 255, 204));
+
+        lblTodaySales.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblTodaySales.setText("Today Sales    - ");
+
+        lblMonthlyProfit5.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        lblMonthlyProfit5.setText("Loarding...");
+
+        javax.swing.GroupLayout TodaySalesLayout = new javax.swing.GroupLayout(TodaySales);
+        TodaySales.setLayout(TodaySalesLayout);
+        TodaySalesLayout.setHorizontalGroup(
+            TodaySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TodaySalesLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(lblTodaySales)
+                .addGap(49, 49, 49)
+                .addComponent(lblMonthlyProfit5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        TodaySalesLayout.setVerticalGroup(
+            TodaySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TodaySalesLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(TodaySalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTodaySales, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMonthlyProfit5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -124,15 +265,25 @@ public class AdminDashboard extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel2)
-                .addContainerGap(618, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(MonthlyProfit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Welcome)
+                    .addComponent(TotalSales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TodaySales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(539, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MonthlyProfit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(TotalSales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(TodaySales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(337, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -152,7 +303,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1007, 609));
+        setSize(new java.awt.Dimension(1246, 739));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -168,6 +319,14 @@ public class AdminDashboard extends javax.swing.JFrame {
     this.dispose();
         
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnUserManagement2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserManagement2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUserManagement2ActionPerformed
+
+    private void btnUserManagement3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserManagement3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUserManagement3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,12 +354,26 @@ public class AdminDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel MonthlyProfit;
+    private javax.swing.JPanel TodaySales;
+    private javax.swing.JPanel TotalSales;
+    private javax.swing.JLabel Welcome;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnUserManagement;
+    private javax.swing.JButton btnUserManagement2;
+    private javax.swing.JButton btnUserManagement3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblMonthlyProfit;
+    private javax.swing.JLabel lblMonthlyProfit1;
+    private javax.swing.JLabel lblMonthlyProfit5;
+    private javax.swing.JLabel lblTodaySales;
+    private javax.swing.JLabel lblTotalSales;
+    private javax.swing.JLabel lblshowTotalSales;
+    private java.awt.Menu menu1;
+    private java.awt.Menu menu2;
+    private java.awt.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
 }

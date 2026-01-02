@@ -174,7 +174,7 @@ public class UserManagement extends javax.swing.JFrame {
         HederLayout.setHorizontalGroup(
             HederLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HederLayout.createSequentialGroup()
-                .addContainerGap(694, Short.MAX_VALUE)
+                .addContainerGap(703, Short.MAX_VALUE)
                 .addComponent(lblheader)
                 .addGap(656, 656, 656))
         );

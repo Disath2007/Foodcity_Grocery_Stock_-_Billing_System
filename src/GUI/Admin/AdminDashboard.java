@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package GUI;
+package GUI.Admin;
 // Add these imports at the TOP
+import GUI.LoginFrame;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -105,7 +106,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnUserManagement = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        btnUserManagement2 = new javax.swing.JButton();
+        btnStockmanagement = new javax.swing.JButton();
         btnUserManagement3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         Welcome = new javax.swing.JLabel();
@@ -129,9 +130,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Dashboard");
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setSize(new java.awt.Dimension(1000, 600));
 
         jPanel1.setBackground(new java.awt.Color(243, 247, 244));
@@ -174,17 +173,17 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        btnUserManagement2.setBackground(new java.awt.Color(147, 202, 55));
-        btnUserManagement2.setFont(new java.awt.Font("Unispace", 1, 12)); // NOI18N
-        btnUserManagement2.setForeground(new java.awt.Color(5, 63, 22));
-        btnUserManagement2.setText("Stock Management");
-        btnUserManagement2.setAlignmentX(0.5F);
-        btnUserManagement2.setBorder(null);
-        btnUserManagement2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnUserManagement2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnUserManagement2.addActionListener(new java.awt.event.ActionListener() {
+        btnStockmanagement.setBackground(new java.awt.Color(147, 202, 55));
+        btnStockmanagement.setFont(new java.awt.Font("Unispace", 1, 12)); // NOI18N
+        btnStockmanagement.setForeground(new java.awt.Color(5, 63, 22));
+        btnStockmanagement.setText("Stock Management");
+        btnStockmanagement.setAlignmentX(0.5F);
+        btnStockmanagement.setBorder(null);
+        btnStockmanagement.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnStockmanagement.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnStockmanagement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUserManagement2ActionPerformed(evt);
+                btnStockmanagementActionPerformed(evt);
             }
         });
 
@@ -214,7 +213,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(btnUserManagement2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnStockmanagement, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addComponent(btnUserManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -231,7 +230,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(btnUserManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnUserManagement2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnStockmanagement, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnUserManagement3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -406,6 +405,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void btnUserManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserManagementActionPerformed
         
         new UserManagement().setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_btnUserManagementActionPerformed
 
@@ -416,9 +416,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void btnUserManagement2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserManagement2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUserManagement2ActionPerformed
+    private void btnStockmanagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockmanagementActionPerformed
+    new StockManagement().setVisible(true);
+    this.dispose();
+    
+    }//GEN-LAST:event_btnStockmanagementActionPerformed
 
     private void btnUserManagement3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserManagement3ActionPerformed
         // TODO add your handling code here:
@@ -458,8 +460,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel TotalSales;
     private javax.swing.JLabel Welcome;
     private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnStockmanagement;
     private javax.swing.JButton btnUserManagement;
-    private javax.swing.JButton btnUserManagement2;
     private javax.swing.JButton btnUserManagement3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

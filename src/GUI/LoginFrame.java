@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import GUI.Admin.AdminDashboard;
 import javax.swing.JOptionPane;
 
 /**

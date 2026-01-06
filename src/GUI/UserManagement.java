@@ -28,44 +28,278 @@ public class UserManagement extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jMenu1 = new javax.swing.JMenu();
+        MainPanel = new javax.swing.JPanel();
+        SidePanel = new javax.swing.JPanel();
+        lblusername = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        lblpassword = new javax.swing.JLabel();
+        txtUsername2 = new javax.swing.JTextField();
+        lblrole = new javax.swing.JLabel();
+        cmbRole = new javax.swing.JComboBox<>();
+        btnadd = new javax.swing.JButton();
+        btnupdate = new javax.swing.JButton();
+        btndelete = new javax.swing.JButton();
+        btnclear = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
+        Heder = new javax.swing.JPanel();
+        lblheader = new javax.swing.JLabel();
+        Rightside = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        lblsearch = new javax.swing.JLabel();
+        txtsearch = new javax.swing.JTextField();
+        btnrefresh = new javax.swing.JButton();
+        lblsearch1 = new javax.swing.JLabel();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 600));
-        setSize(new java.awt.Dimension(700, 450));
+        setPreferredSize(new java.awt.Dimension(1530, 955));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1530, 955));
 
-        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
-        jLabel2.setText("UserManagement ");
-        jPanel1.add(jLabel2);
+        MainPanel.setBackground(new java.awt.Color(243, 247, 244));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SidePanel.setBackground(new java.awt.Color(73, 149, 51));
+
+        lblusername.setFont(new java.awt.Font("Unispace", 0, 18)); // NOI18N
+        lblusername.setForeground(new java.awt.Color(5, 63, 22));
+        lblusername.setText("Username :");
+
+        lblpassword.setFont(new java.awt.Font("Unispace", 0, 18)); // NOI18N
+        lblpassword.setForeground(new java.awt.Color(5, 63, 22));
+        lblpassword.setText("Password :");
+
+        lblrole.setFont(new java.awt.Font("Unispace", 0, 18)); // NOI18N
+        lblrole.setForeground(new java.awt.Color(5, 63, 22));
+        lblrole.setText("Role     :");
+
+        cmbRole.setFont(new java.awt.Font("Unispace", 0, 12)); // NOI18N
+        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Manager", "Cashier" }));
+        cmbRole.setSelectedItem(cmbRole);
+
+        btnadd.setBackground(new java.awt.Color(147, 202, 55));
+        btnadd.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btnadd.setText("Add");
+
+        btnupdate.setBackground(new java.awt.Color(147, 186, 40));
+        btnupdate.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btnupdate.setText("UpDate");
+
+        btndelete.setBackground(new java.awt.Color(255, 102, 102));
+        btndelete.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btndelete.setText("Delete");
+        btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
+
+        btnclear.setBackground(new java.awt.Color(153, 153, 153));
+        btnclear.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btnclear.setText("Clear");
+
+        btnback.setBackground(new java.awt.Color(153, 153, 153));
+        btnback.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btnback.setText("Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SidePanelLayout = new javax.swing.GroupLayout(SidePanel);
+        SidePanel.setLayout(SidePanelLayout);
+        SidePanelLayout.setHorizontalGroup(
+            SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SidePanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblrole)
+                        .addComponent(lblpassword)
+                        .addComponent(lblusername)
+                        .addComponent(txtUsername2)
+                        .addComponent(txtUsername)
+                        .addComponent(cmbRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(SidePanelLayout.createSequentialGroup()
+                            .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                            .addComponent(btnupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SidePanelLayout.createSequentialGroup()
+                            .addComponent(btndelete, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnclear, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        SidePanelLayout.setVerticalGroup(
+            SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SidePanelLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(lblusername)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblpassword)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblrole)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cmbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(SidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btndelete, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnclear, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 404, Short.MAX_VALUE)
+                .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
+        );
+
+        Heder.setBackground(new java.awt.Color(73, 128, 37));
+        Heder.setPreferredSize(new java.awt.Dimension(1000, 60));
+
+        lblheader.setFont(new java.awt.Font("Unispace", 1, 20)); // NOI18N
+        lblheader.setForeground(new java.awt.Color(243, 247, 244));
+        lblheader.setText("User Management");
+
+        javax.swing.GroupLayout HederLayout = new javax.swing.GroupLayout(Heder);
+        Heder.setLayout(HederLayout);
+        HederLayout.setHorizontalGroup(
+            HederLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HederLayout.createSequentialGroup()
+                .addContainerGap(694, Short.MAX_VALUE)
+                .addComponent(lblheader)
+                .addGap(656, 656, 656))
+        );
+        HederLayout.setVerticalGroup(
+            HederLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HederLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblheader, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Rightside.setBackground(new java.awt.Color(243, 247, 244));
+
+        jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Username", "Role"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        lblsearch.setFont(new java.awt.Font("Unispace", 0, 18)); // NOI18N
+        lblsearch.setForeground(new java.awt.Color(5, 63, 22));
+        lblsearch.setText("Search By Name/ID :");
+
+        btnrefresh.setBackground(new java.awt.Color(147, 202, 55));
+        btnrefresh.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
+        btnrefresh.setText("Refresh");
+
+        lblsearch1.setFont(new java.awt.Font("Unispace", 0, 18)); // NOI18N
+        lblsearch1.setForeground(new java.awt.Color(5, 63, 22));
+        lblsearch1.setText("All Users :");
+
+        javax.swing.GroupLayout RightsideLayout = new javax.swing.GroupLayout(Rightside);
+        Rightside.setLayout(RightsideLayout);
+        RightsideLayout.setHorizontalGroup(
+            RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RightsideLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblsearch1)
+                    .addGroup(RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1023, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(RightsideLayout.createSequentialGroup()
+                            .addGroup(RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblsearch)
+                                .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnrefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        RightsideLayout.setVerticalGroup(
+            RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RightsideLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(RightsideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RightsideLayout.createSequentialGroup()
+                        .addComponent(lblsearch)
+                        .addGap(17, 17, 17)
+                        .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnrefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(lblsearch1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
+        );
+
+        javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
+        MainPanel.setLayout(MainPanelLayout);
+        MainPanelLayout.setHorizontalGroup(
+            MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Heder, javax.swing.GroupLayout.PREFERRED_SIZE, 1530, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(MainPanelLayout.createSequentialGroup()
+                .addComponent(SidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(Rightside, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        MainPanelLayout.setVerticalGroup(
+            MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelLayout.createSequentialGroup()
+                .addComponent(Heder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Rightside, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 975, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1546, 979));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btndeleteActionPerformed
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        new AdminDashboard().setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,8 +327,28 @@ public class UserManagement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel Heder;
+    private javax.swing.JPanel MainPanel;
+    private javax.swing.JPanel Rightside;
+    private javax.swing.JPanel SidePanel;
+    private javax.swing.JButton btnadd;
+    private javax.swing.JButton btnback;
+    private javax.swing.JButton btnclear;
+    private javax.swing.JButton btndelete;
+    private javax.swing.JButton btnrefresh;
+    private javax.swing.JButton btnupdate;
+    private javax.swing.JComboBox<String> cmbRole;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblheader;
+    private javax.swing.JLabel lblpassword;
+    private javax.swing.JLabel lblrole;
+    private javax.swing.JLabel lblsearch;
+    private javax.swing.JLabel lblsearch1;
+    private javax.swing.JLabel lblusername;
+    private javax.swing.JTextField txtUsername;
+    private javax.swing.JTextField txtUsername2;
+    private javax.swing.JTextField txtsearch;
     // End of variables declaration//GEN-END:variables
 }
